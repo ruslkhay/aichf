@@ -31,18 +31,7 @@ pre-commit run --files file.py
 pre-commit run --all-files
 ```
 
+# Content
 
-## Part 1 Crypto Hedge Fund Concept Presentation
-
-- ### Hedge fund model
-
-- ### Risk management
-
-- ### [Portfolio management](docs/portfolio.md)
-
-
-- ### System architecure 
-
-
-
+1. [Hedge Fund Concept](docs/concept_presentation.md)
 
