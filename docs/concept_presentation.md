@@ -17,22 +17,29 @@ It's role is to detect profitable opportunities and adaptation to the
 market behavior.
 For instance rule based model can be defined for managing portfolio and 
 RFL model for fixing rule based model parameters over time. 
-
+AI agents interact via an API or a common framework (for example, in Python with
+libraries like Ray for multi-agent): forecasts from ML agents are fed into the 
+MPT for daily portfolio rebalancing. If volatility is predicted to be high, the
+agent can "advise" hedging (options or futures).
 ---
 #### Resources
 - https://www.investopedia.com/top-7-technical-analysis-tools-4773275
 - https://www.cryptohopper.com/ru/blog/the-5-most-used-technical-indicators-and-how-they-work-306
 
 # Risk management
+
 The five principal risk measures include:
-- alpha, 
-- beta, 
-- R-squared, 
-- standard deviation, 
-- Sharpe ratio. 
+- Alpha - risk relative to the market or a selected benchmark index, 
+- Beta - measures the volatility or systematic risk of a fund in comparison to
+the market or the selected benchmark index, 
+- R-squared - percentage of an investment's movement attributable to movements
+in its benchmark index, 
+- Standard deviation (volatility), 
+- Sharpe ratio = $\frac{R_p - R_f}{\sigma_p}$, where $R_p$ - return of portfolio, $R_f$ - risk-free rate, $\sigma_p$ - standard divination of the portfolio's excess return. 
 
 AI helps mitigate losses during high-volatility periods by enabling peeking
-in the future (predictions) of asset price or liquidity. Using predictions
+in the future (predictions) of asset price or liquidity. That knowledge
+enables correction of weights in the portfolio. Using predictions
 technical indicators can be applied and therefore signals "buy" or "sell"
 to be obtained.
 
@@ -58,6 +65,11 @@ statistical assumptions and linear relationships, which may not adequately
 capture the complexities of financial markets. Given that these markets often 
 exhibit non-linear dynamics and intricate interdependencies, Deep Learning (DL) 
 emerges as a compelling alternative for portfolio optimization.
+
+Another approach for example, an XGBoost or Random Forest agent predicts future returns, and 
+GARCH predicts volatility; together, they produce a covariance matrix for 
+Markowitz optimization. 
+This is useful during the rebalancing phase (daily or hourly) to adapt to the market.
 
 ---
 #### Resources
