@@ -33,5 +33,10 @@ pre-commit run --all-files
 
 # Content
 
-1. [Hedge Fund Concept](docs/concept_presentation.md)
+1. [Hedge Fund Concept](docs/concept_presentation.md) - presentation of this
+project concept
+    * `fetch_data.ipynb` - download crypto data from binance
+    * `mpt.ipynb` - Modern Portfolio Theory form multiple crypto currencies
+    * `baseline_strategy.ipynb` - moving average strategy
+    * `risk.ipynb` - Risk measures, ARCH, GARCH models
 
